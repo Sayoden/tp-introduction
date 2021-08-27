@@ -39,6 +39,9 @@ function ajouterFruit(string $nom,
  * @param string $nom
  */
 function afficherProduit(string $nom): void {
+    /**
+     * Placez votre code ici
+     */
 }
 
 /**
@@ -46,12 +49,18 @@ function afficherProduit(string $nom): void {
  * @param array $lesFruits
  */
 function ajouterRecette(string $nom, array $lesFruits): void {
+    /**
+     * Placez votre code ici
+     */
 }
 
 /**
  * @param string $nom
  */
 function valNutRecette(string $nom): void {
+    /**
+     * Placez votre code ici
+     */
 }
 
 

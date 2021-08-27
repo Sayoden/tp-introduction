@@ -7,8 +7,6 @@ namespace TP1;
  * Déclarez ici la constante PI
  */
 
-define ("PI", 3.1416);
-
 class TP1Section1 {
 
     /**
@@ -35,10 +33,11 @@ class TP1Section1 {
      * Ecrire la fonction stockChocolat avec un paramètre stockDepart qui repond à la question
      * @param float $stockDepart
      * @return float|int
-     * Josette reçoit chaque jour un kilo de chocolat supérieur.
+     * Josette reçoit chaque jour, en début de journée, un kilo de chocolat supérieur.
+     * Josette peut travailler au maximum $max kilos de chocolat par jour.
      * En un jour, avec la quantité de chocolat en stock, Josette fabrique 2 fois la quantité de chocolat en stock.
-     * À la fin de la journée la quantité de chocolat en stock correspond à la somme de la quantité de chocolat reçue plus la quantité produite.
-     * Calculez la quantité de chocolat produite  après 10 jours en fonction du stock de chocolat au départ.
+     * À la fin de la journée la quantité de chocolat en stock correspond à la quantité de chocolat reçue qui vient s'ajouter à la quantité produite.
+     * Calculez la quantité de chocolat produite après 10 jours en fonction du stock de chocolat au départ.
      */
     function stockChocolat(float $stockDepart): int| float {
         return 0;

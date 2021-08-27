@@ -9,7 +9,7 @@ use TP1\TP1Section1;
 class TP1Section1Test extends TestCase {
 
     /** @test
-     *  @testdox Utilisation de la structure de contrôle if
+     *  @testdox Utilisation de la structure de contrôle if (est majeur ?)
      */
     function le_if() {
         $tp1 = new TP1Section1();
@@ -36,8 +36,11 @@ class TP1Section1Test extends TestCase {
      */
     function la_boucle_for() {
         $tp1 = new TP1Section1();
-        $this->assertEquals(11263, $tp1->stockChocolat(10));
-        $this->assertEquals(1023, $tp1->stockChocolat(0));
+        $val = [0 => 930, 5 => 1316, 10 => 1396, 15 => 1541, 20 => 1581, 100 => 2110];
+
+        foreach ($val as $v => $r) {
+            $this->assertEquals($r, $tp1->stockChocolat($v));
+        }
     }
 
 
@@ -54,7 +57,7 @@ class TP1Section1Test extends TestCase {
 
 
     /** @test
-     *  @testdox Utilisation de la structure de contrôle while
+     *  @testdox Utilisation de la structure de contrôle while (Décimales de PI)
      */
     function decimal_de_pi() {
         $tp1 = new TP1Section1();
@@ -85,6 +88,9 @@ class TP1Section1Test extends TestCase {
         $this-> assertEquals('Réel', $tp1->typeParametre(-18.5));
         $this-> assertEquals('Tableau', $tp1->typeParametre([]));
         $this-> assertEquals('Booléen', $tp1->typeParametre(true));
+        $this->assertEquals('Nulle', $tp1->typeParametre(null));
+        $a= null;
+        $this->assertEquals('Nulle', $tp1->typeParametre($a));
     }
 
     /** @test

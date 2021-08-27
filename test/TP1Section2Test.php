@@ -10,7 +10,7 @@ class TP1Section2Test extends TestCase {
 
     /**
      * @test
-     * @testdox insertion en queue dans un tableau
+     * @testdox insertion classique dans un tableau
      */
     function insertion_de_base() {
         $tp1_2 = new TP1Section2();
@@ -22,14 +22,6 @@ class TP1Section2Test extends TestCase {
         print_r(array_diff($tab, [1, 2, 3, 4]));
     }
 
-    static function key_compare_func($a, $b) {
-        if ($a === $b) {
-            return 0;
-        }
-        return ($a > $b) ? 1 : -1;
-    }
-
-
     /**
      * @test
      * @testdox insertion en tête dans un tableau
@@ -39,7 +31,13 @@ class TP1Section2Test extends TestCase {
 
         $tab = $tp1_2->addElementEnTeteTab(1, 2, 3, 4);
         $this->assertEquals(4, count($tab));
-        $this->assertEmpty(array_diff_uassoc([4, 3, 2, 1], $tab, "key_compare_func"));
+        $this->assertEmpty(array_diff_uassoc([4, 3, 2, 1], $tab,
+            function (mixed $a, mixed $b): int {
+                if ($a === $b) {
+                    return 0;
+                }
+                return ($a > $b) ? 1 : -1;
+            }));
         $this->assertEmpty(array_diff_assoc($tab, [4, 3, 2, 1]));
     }
 
@@ -150,7 +148,7 @@ class TP1Section2Test extends TestCase {
 
     /**
      * @test
-     * @testdox création d'un tableau à deux dimensions
+     * @testdox affichage d'un tableau à deux dimensions avec formatage
      */
     function test_afficherTableMultiplication() {
         $tp1_2 = new TP1Section2();
