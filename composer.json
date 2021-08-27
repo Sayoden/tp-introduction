@@ -1,0 +1,22 @@
+{
+    "name": "pweb1/tp_intro",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Hemery Fred",
+            "email": "fred.hemery@univ-artois.fr"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "TP1\\" : "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -vvv --testdox-html tp1.html; open tp1.html",
+        "test-text": "vendor/bin/phpunit -vvv --testdox"
+    }
+}
