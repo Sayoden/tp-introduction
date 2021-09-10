@@ -16,7 +16,7 @@ class TP1Section1 {
      * @return bool
      */
     function estMajeur($age): bool {
-        return false;
+        return $age >= 18;
     }
 
 
@@ -26,7 +26,15 @@ class TP1Section1 {
      * @return int
      */
     function sommeMultipleDeTrois(int $limite): int {
-        return 0;
+        $value = 0;
+
+        for ($i = 0; $i <= $limite; $i++) {
+            if ($i % 3 == 0) {
+                $value += $i;
+            }
+        }
+
+        return $value;
     }
 
     /**
