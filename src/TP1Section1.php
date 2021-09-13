@@ -7,6 +7,8 @@ namespace TP1;
  * Déclarez ici la constante PI
  */
 
+$PI = 3.14;
+
 class TP1Section1 {
 
     /**
@@ -48,6 +50,11 @@ class TP1Section1 {
      * Calculez la quantité de chocolat produite après 10 jours en fonction du stock de chocolat au départ.
      */
     function stockChocolat(float $stockDepart): int| float {
+        $josetteChocolat = 0;
+        $quantiteActu = $stockDepart;
+        for ($i = 0; $i <= 10; $i++) {
+            $josetteChocolat += 10;
+        }
         return 0;
     }
 
